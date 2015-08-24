@@ -1,0 +1,84 @@
+@objects
+    HeaderBar		css		.header__header-wrapper
+    Logo			id		tw-logo
+    HeaderMenu		id		main-menu
+    MobileHeader	css		.mobile-header
+    MobileMenu		id		mobile-menu-title
+    MobileLogo		id		mobile-tw-logo
+    Carousel		id		homepage-carousel
+    SummaryBlock-*	css		.feature_summary
+    StoryBlock		id		bresicwhitney-summary
+    ArticleBlock-*	css		.curated-article
+    Footer			css		.footer
+
+
+= Header Section =
+    @on desktop
+        HeaderBar:
+            contains Logo, HeaderMenu
+            width 960px
+            height 78px
+
+        HeaderMenu:
+            visible
+
+    @on mobile
+        HeaderBar:
+            absent
+
+        MobileHeader:
+            contains MobileLogo, MobileMenu
+
+        MobileMenu:
+            visible
+
+= Carousel Section = 
+    @on desktop
+        Carousel:
+            visible
+            width 100% of screen/width
+            height 420px
+            below HeaderBar
+
+    @on mobile
+        Carousel:
+            visible
+            width 100% of screen/width
+            height 279px
+            below MobileHeader
+
+
+= Summary Section =
+    @on desktop
+        SummaryBlock-1:
+            aligned horizontally all SummaryBlock-2
+            aligned horizontally all SummaryBlock-3
+    @on mobile
+        SummaryBlock-1:
+            aligned vertically all SummaryBlock-2
+            aligned vertically all SummaryBlock-3
+
+= Story Section =
+    @on desktop
+        StoryBlock:
+            below SummaryBlock-1
+    @on mobile
+        StoryBlock:
+            absent
+
+= Article Section =
+    @on desktop
+        ArticleBlock-1:
+            aligned horizontally all ArticleBlock-2
+            aligned horizontally all ArticleBlock-3
+
+    @on mobile
+        ArticleBlock-1:
+            aligned vertically all ArticleBlock-2
+            aligned vertically all ArticleBlock-3
+
+= Footer Section =
+    @on *
+        Footer:
+            visible
+

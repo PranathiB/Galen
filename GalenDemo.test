@@ -1,0 +1,11 @@
+
+@@ Table devices 
+    | deviceName   | tags        | size      |
+    | mobile       | all,mobile  | 414x736   |
+    | desktop      | all,desktop | 1280x1024 |
+
+@@ Parameterized using devices
+Home page on ${deviceName} 
+    http://www.pranathib.com  ${size}
+        check GalenDemo.gspec --include "${tags}"
+

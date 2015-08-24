@@ -1,0 +1,11 @@
+
+@@ Table devices 
+    | deviceName   | tags        | size      |
+    | mobile       | all,mobile  | 414x736   |
+    | desktop      | all,desktop | 1280x1024 |
+
+@@ Parameterized using devices
+ThoughtWorks home page on ${deviceName} 
+    http://www.thoughtworks.com  ${size}
+        check ThoughtWorks.gspec --include "${tags}"
+

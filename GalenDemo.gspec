@@ -1,0 +1,48 @@
+@objects
+    Header          css         html>body>header
+    Banner          css         .banner-container.content
+    Card-*          css         .card
+    Footer          css         html>body>footer
+
+
+= Header Section =
+    @on desktop
+        Header:
+            width is 100% of viewport/width
+            height is ~105px
+
+    @on mobile
+        Header:
+            width is 100% of viewport/width
+            height is 55px
+
+= Banner Section =
+    @on desktop
+        Banner:
+            below Header
+            width is 960px
+            height is 430px
+
+    @on mobile
+        Banner:
+            absent
+
+= Cards Section =
+    @on desktop
+        Card-1:
+            below Banner
+            aligned horizontally all Card-2
+            aligned horizontally all Card-3
+    
+    @on mobile
+        Card-1:
+            below Header
+            aligned vertically all Card-2
+            aligned vertically all Card-3
+
+
+= Footer Section =
+    @on *
+        Footer:
+            height is 34px
+            width is 100% of viewport/width
